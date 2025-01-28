@@ -1,0 +1,171 @@
+{
+    "toppers": {
+        "class10": [
+            {
+                "name": "Rahul Sharma",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "98.6%",
+                "rank": "1st",
+                "class": "X"
+            },
+            {
+                "name": "Priya Patel",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "97.8%",
+                "rank": "2nd",
+                "class": "X"
+            },
+            {
+                "name": "Amit Kumar",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "97.2%",
+                "rank": "3rd",
+                "class": "X"
+            }
+        ],
+        "class6": [
+            {
+                "name": "Sneha Singh",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "99.0%",
+                "rank": "1st",
+                "class": "VI"
+            },
+            {
+                "name": "Rohan Gupta",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "98.5%",
+                "rank": "2nd",
+                "class": "VI"
+            },
+            {
+                "name": "Ananya Reddy",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "98.0%",
+                "rank": "3rd",
+                "class": "VI"
+            }
+        ],
+        "class4": [
+            {
+                "name": "Arjun Malhotra",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "99.2%",
+                "rank": "1st",
+                "class": "IV"
+            },
+            {
+                "name": "Riya Kapoor",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "98.8%",
+                "rank": "2nd",
+                "class": "IV"
+            },
+            {
+                "name": "Aditya Verma",
+                "image": "https://via.placeholder.com/150",
+                "percentage": "98.4%",
+                "rank": "3rd",
+                "class": "IV"
+            }
+        ]
+    },
+    "results": {
+        "class10": [
+            {
+                "rollNo": "10001",
+                "name": "Rahul Sharma",
+                "class": "X",
+                "totalMarks": "493/500",
+                "percentage": "98.6%",
+                "status": "Pass",
+                "subjects": {
+                    "Mathematics": 99,
+                    "Science": 98,
+                    "English": 97,
+                    "Social Studies": 100,
+                    "Hindi": 99
+                }
+            },
+            {
+                "rollNo": "10002",
+                "name": "Priya Patel",
+                "class": "X",
+                "totalMarks": "489/500",
+                "percentage": "97.8%",
+                "status": "Pass",
+                "subjects": {
+                    "Mathematics": 98,
+                    "Science": 97,
+                    "English": 98,
+                    "Social Studies": 98,
+                    "Hindi": 98
+                }
+            }
+        ],
+        "class6": [
+            {
+                "rollNo": "6001",
+                "name": "Sneha Singh",
+                "class": "VI",
+                "totalMarks": "495/500",
+                "percentage": "99.0%",
+                "status": "Pass",
+                "subjects": {
+                    "Mathematics": 100,
+                    "Science": 98,
+                    "English": 99,
+                    "Social Studies": 99,
+                    "Hindi": 99
+                }
+            },
+            {
+                "rollNo": "6002",
+                "name": "Rohan Gupta",
+                "class": "VI",
+                "totalMarks": "492/500",
+                "percentage": "98.4%",
+                "status": "Pass",
+                "subjects": {
+                    "Mathematics": 99,
+                    "Science": 98,
+                    "English": 97,
+                    "Social Studies": 99,
+                    "Hindi": 99
+                }
+            }
+        ],
+        "class4": [
+            {
+                "rollNo": "4001",
+                "name": "Arjun Malhotra",
+                "class": "IV",
+                "totalMarks": "496/500",
+                "percentage": "99.2%",
+                "status": "Pass",
+                "subjects": {
+                    "Mathematics": 100,
+                    "Science": 99,
+                    "English": 99,
+                    "Social Studies": 99,
+                    "Hindi": 99
+                }
+            },
+            {
+                "rollNo": "4002",
+                "name": "Riya Kapoor",
+                "class": "IV",
+                "totalMarks": "494/500",
+                "percentage": "98.8%",
+                "status": "Pass",
+                "subjects": {
+                    "Mathematics": 99,
+                    "Science": 98,
+                    "English": 99,
+                    "Social Studies": 99,
+                    "Hindi": 99
+                }
+            }
+        ]
+    }
+}

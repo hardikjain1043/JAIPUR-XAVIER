@@ -1,0 +1,9 @@
+# Image Sources (Free-to-use placeholder images)
+hero-bg.jpg: https://images.unsplash.com/photo-1523050854058-8df90110c9f1
+school1.jpg: https://images.unsplash.com/photo-1546410531-bb4caa6b424d
+school2.jpg: https://images.unsplash.com/photo-1509062522246-3755977927d7
+school3.jpg: https://images.unsplash.com/photo-1524178232363-1fb2b075b655
+students.jpg: https://images.unsplash.com/photo-1427504494785-3a9ca7044f45
+campus.jpg: https://images.unsplash.com/photo-1541339907198-e08756dedf3f
+classroom.jpg: https://images.unsplash.com/photo-1497633762265-9d179a990aa6
+library.jpg: https://images.unsplash.com/photo-1524995997946-a1c2e315a42f

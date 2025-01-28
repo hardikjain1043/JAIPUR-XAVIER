@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results - JAIPUR XAVIER</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="/css/style.css">
+     <link rel="stylesheet" href="/css/responsive.css">
+    <style>
+       
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://img.freepik.com/free-photo/education-concept-student-studying-brainstorming-campus-concept_1418-65.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            height: 50vh;
+            margin-bottom: 50px;
+        }
+        
+        .results-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .topper-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .topper-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .search-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .result-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h5 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer ul li a:hover {
+            color: #3498db;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .social-icons a:hover {
+            color: #3498db;
+        }
+        
+        .progress {
+            height: 20px;
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+        }
+        
+        .progress-bar {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        
+        .subject-score {
+            margin-bottom: 15px;
+        }
+        
+        .subject-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .topper-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .topper-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        #showMoreToppers {
+            margin-top: 20px;
+        }
+        
+        .result-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/JAIPUR XAVIER.png" alt="School Logo" class="logo">
+                <span>JAIPUR XAVIER</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schools.html">Our Schools</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Result.html">Result</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sports.html">Sports & Activities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Student Results</h1>
+            <p class="lead">Check your academic performance and view class toppers</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="container">
+        <div class="search-section">
+            <h3 class="text-center mb-4">Search Results</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="classSelect" class="form-label">Select Class</label>
+                        <select class="form-select select2" id="classSelect" multiple>
+                            <option value="class1">Class 1</option>
+                            <option value="class2">Class 2</option>
+                            <option value="class3">Class 3</option>
+                            <option value="class4">Class 4</option>
+                            <option value="class5">Class 5</option>
+                            <option value="class6">Class 6</option>
+                            <option value="class7">Class 7</option>
+                            <option value="class8">Class 8</option>
+                            <option value="class9">Class 9</option>
+                            <option value="class10">Class 10</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rollNo" class="form-label">Roll Number</label>
+                        <input type="text" class="form-control" id="rollNo" placeholder="Enter roll number">
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary" onclick="searchResults()">
+                            <i class="fas fa-search me-2"></i>Search Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Display Section -->
+    <section class="results-section">
+        <div class="container">
+            <div id="resultsContainer">
+                <!-- Results will be displayed here -->
+            </div>
+            
+            <!-- Class Toppers Section -->
+            <div id="toppersSection">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3>Class Toppers</h3>
+                    <select class="form-select w-auto" id="topperClassSelect">
+                        <option value="all">All Classes</option>
+                        <option value="class1">Class 1</option>
+                        <option value="class2">Class 2</option>
+                        <option value="class3">Class 3</option>
+                        <option value="class4">Class 4</option>
+                        <option value="class5">Class 5</option>
+                        <option value="class6">Class 6</option>
+                        <option value="class7">Class 7</option>
+                        <option value="class8">Class 8</option>
+                        <option value="class9">Class 9</option>
+                        <option value="class10">Class 10</option>
+                    </select>
+                </div>
+                <div id="toppersContainer">
+                    <!-- Toppers will be displayed here -->
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-outline-primary" id="showMoreToppers">Show More Toppers</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@excellenceacademy.edu</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Education Street, City</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="schools.html">Our Schools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 JAIPUR XAVIER. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        let visibleToppers = 6; // Initial number of visible toppers
+        let allToppers = []; // Store all toppers data
+        
+        // Initialize Select2
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: "Select one or more classes",
+                allowClear: true
+            });
+            
+            // Load initial data
+            loadToppers();
+            
+            // Event listener for topper class filter
+            $('#topperClassSelect').change(function() {
+                filterToppers($(this).val());
+            });
+            
+            // Event listener for show more button
+            $('#showMoreToppers').click(function() {
+                visibleToppers += 6;
+                displayToppers(allToppers);
+            });
+            
+            // Update toppers when search class changes
+            $('#classSelect').change(function() {
+                const selectedClasses = $(this).val();
+                if (selectedClasses.length === 1) {
+                    $('#topperClassSelect').val(selectedClasses[0]).trigger('change');
+                }
+            });
+        });
+
+        // Load and display toppers
+        function loadToppers() {
+            fetch('data/results.json')
+                .then(response => response.json())
+                .then(data => {
+                    allToppers = [];
+                    Object.keys(data.toppers).forEach(classKey => {
+                        const classToppers = data.toppers[classKey];
+                        allToppers = allToppers.concat(classToppers.map(topper => ({...topper, classKey})));
+                    });
+                    displayToppers(allToppers);
+                })
+                .catch(error => console.error('Error loading toppers:', error));
+        }
+
+        // Filter toppers by class
+        function filterToppers(classKey) {
+            if (classKey === 'all') {
+                displayToppers(allToppers);
+            } else {
+                const filteredToppers = allToppers.filter(topper => topper.classKey === classKey);
+                displayToppers(filteredToppers);
+            }
+        }
+
+        // Display toppers
+        function displayToppers(toppers) {
+            const toppersContainer = document.getElementById('toppersContainer');
+            toppersContainer.innerHTML = '';
+            
+            const toppersToShow = toppers.slice(0, visibleToppers);
+            
+            toppersToShow.forEach(topper => {
+                const topperCard = `
+                    <div class="card topper-card mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <h5 class="card-title">${topper.name}</h5>
+                                    <p class="card-text">
+                                        Class: ${topper.class}<br>
+                                        Rank: ${topper.rank}<br>
+                                        Percentage: ${topper.percentage}
+                                    </p>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="progress-info">
+                                        <div class="subjects">
+                                            ${topper.subjects ? Object.entries(topper.subjects).map(([subject, marks]) => `
+                                                <div class="subject-score">
+                                                    <span class="subject-name">${subject}</span>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" 
+                                                             style="width: ${marks}%" 
+                                                             aria-valuenow="${marks}" 
+                                                             aria-valuemin="0" 
+                                                             aria-valuemax="100">
+                                                            ${marks}%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `).join('') : 'No subject data available'}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                toppersContainer.innerHTML += topperCard;
+            });
+            
+            // Show/hide "Show More" button
+            document.getElementById('showMoreToppers').style.display = 
+                visibleToppers >= toppers.length ? 'none' : 'block';
+        }
+
+        // Search results
+        function searchResults() {
+            const selectedClasses = $('#classSelect').val();
+            const rollNo = document.getElementById('rollNo').value;
+            
+            if (!selectedClasses.length) {
+                alert('Please select at least one class');
+                return;
+            }
+            
+            fetch('data/results.json')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsContainer = document.getElementById('resultsContainer');
+                    resultsContainer.innerHTML = '<h3 class="text-center mb-4">Search Results</h3>';
+                    
+                    let foundResults = false;
+                    
+                    selectedClasses.forEach(classKey => {
+                        const classResults = data.results[classKey];
+                        if (classResults) {
+                            classResults.forEach(result => {
+                                if (!rollNo || result.rollNo === rollNo) {
+                                    foundResults = true;
+                                    const resultCard = `
+                                        <div class="result-card">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <h4>${result.name}</h4>
+                                                    <p>Roll No: ${result.rollNo}</p>
+                                                    <p>Class: ${result.class}</p>
+                                                    <h5>Overall: ${result.percentage}</h5>
+                                                    <p>Rank: ${result.rank || 'N/A'}</p>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5>Subject-wise Performance</h5>
+                                                    ${result.subjects ? Object.entries(result.subjects).map(([subject, marks]) => `
+                                                        <div class="subject-score mb-2">
+                                                            <div class="d-flex justify-content-between mb-1">
+                                                                <span>${subject}</span>
+                                                                <span>${marks}%</span>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" 
+                                                                     style="width: ${marks}%" 
+                                                                     aria-valuenow="${marks}" 
+                                                                     aria-valuemin="0" 
+                                                                     aria-valuemax="100">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    `).join('') : '<p>No subject data available</p>'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+                                    resultsContainer.innerHTML += resultCard;
+                                }
+                            });
+                        }
+                    });
+                    
+                    if (!foundResults) {
+                        resultsContainer.innerHTML += `
+                            <div class="alert alert-info text-center">
+                                No results found for the selected criteria
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => console.error('Error searching results:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* Responsive Styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    .hero-section img {
+        margin-top: 2rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .navbar-brand img.logo {
+        height: 40px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .school-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .hero-section {
+        padding-top: 80px;
+    }
+    
+    .social-links a {
+        font-size: 1.2rem;
+        margin-right: 0.75rem;
+    }
+}
